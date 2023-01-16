@@ -6,33 +6,41 @@ public class grt {
 
 	public static Scanner read = new Scanner(System.in);
 
-	void solve() {
 
-	}
 
 	public static void main(String[] args) {
 
+
 		if (System.getProperty("ONLINE_JUDGE") == null) {
+
 			try {
 				System.setOut(new PrintStream(
 				                  new FileOutputStream("output1.txt")));
 
 				read = new Scanner(new File("input1.txt"));
+				System.setErr(new PrintStream(new FileOutputStream("Error1.txt")));
 			}
 
 			catch (Exception e) {
 			}
 		}
-
 		long t;
 		grt g = new grt();
-
 		t = read.nextLong();
+		System.err.println(t);
 		while (t-- > 0) {
 			g.solve();
 		}
 		read.close();
 	}
 
+	void solve() {
 
+		long n, k, need = 0;
+		n = read.nextLong();
+		k = read.nextLong();
+		need = (k - 1) / (n - 1);
+		System.out.println(k + need);
+		// read.close();
+	}
 }
