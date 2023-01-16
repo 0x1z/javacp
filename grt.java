@@ -8,6 +8,10 @@ public class grt {
 
 
 
+	void solve() {
+
+	}
+
 	public static void main(String[] args) {
 
 
@@ -34,13 +38,4 @@ public class grt {
 		read.close();
 	}
 
-	void solve() {
-
-		long n, k, need = 0;
-		n = read.nextLong();
-		k = read.nextLong();
-		need = (k - 1) / (n - 1);
-		System.out.println(k + need);
-		// read.close();
-	}
 }
